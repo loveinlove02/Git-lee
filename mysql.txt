@@ -1,0 +1,72 @@
+root 1234
+
+C:\Users\User>mysql -u root -p mysql
+Enter password: 1234
+
+
+사용자 계정 만들기
+
+루트로 접속
+
+데이터베이스 만들기 : create database testdb
+
+grant all privileges on testdb.* to 'lee9532'@localhost identified by '1234' 
+
+
+로그인
+
+C:\Users\User>mysql -u lee9532 -p testdb
+Enter password: ****
+
+mysql> \s
+--------------
+mysql  Ver 14.14 Distrib 5.5.29, for Win32 (x86)
+
+Connection id:          19
+Current database:       testdb
+Current user:           lee9532@localhost
+SSL:                    Not in use
+Using delimiter:        ;
+Server version:         5.5.29 MySQL Community Server (GPL)
+Protocol version:       10
+Connection:             localhost via TCP/IP
+Server characterset:    utf8
+Db     characterset:    utf8
+Client characterset:    utf8
+Conn.  characterset:    utf8
+TCP port:               3306
+Uptime:                 9 hours 1 min 40 sec
+
+Threads: 1  Questions: 129  Slow queries: 0  Opens: 40  Flush tables: 1  Open tables: 3  Queries per second avg: 0.003
+--------------
+
+
+데이터베이스 : testdb
+계정 : lee9532
+비번 : 1234
+테이블 : phone
+
+create table phone(name varchar(10), no varchar(20));
+
+
+
+데이터베이스 : testdb
+계정 : lee9532
+비번 : 1234
+테이블 : product
+
+
+create table products(pname varchar(20), price int );
+
+
+
+
+
+use projectdb;
+
+member
+
+// 한글깨질때
+set character set euckr;
+
+create table phone(name char(10), no char(20));
